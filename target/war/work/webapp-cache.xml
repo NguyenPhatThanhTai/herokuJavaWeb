@@ -1,0 +1,204 @@
+<webapp-structure>
+  <registeredFiles>
+    <entry>
+      <string>currentBuild</string>
+      <path-set>
+        <pathsSet class="linked-hash-set">
+          <string>WEB-INF/classes/Controller.class</string>
+          <string>WEB-INF/classes/getAPI.class</string>
+          <string>WEB-INF/classes/java-json.jar</string>
+          <string>WEB-INF/classes/test.class</string>
+          <string>WEB-INF/lib/javaee-web-api-8.0.1.jar</string>
+          <string>WEB-INF/lib/spring-webmvc-5.0.2.RELEASE.jar</string>
+          <string>WEB-INF/lib/spring-aop-5.0.2.RELEASE.jar</string>
+          <string>WEB-INF/lib/spring-beans-5.0.2.RELEASE.jar</string>
+          <string>WEB-INF/lib/spring-context-5.0.2.RELEASE.jar</string>
+          <string>WEB-INF/lib/spring-core-5.0.2.RELEASE.jar</string>
+          <string>WEB-INF/lib/spring-jcl-5.0.2.RELEASE.jar</string>
+          <string>WEB-INF/lib/spring-expression-5.0.2.RELEASE.jar</string>
+          <string>WEB-INF/lib/spring-web-5.0.2.RELEASE.jar</string>
+          <string>WEB-INF/lib/jetty-util-6.1.25.jar</string>
+        </pathsSet>
+      </path-set>
+    </entry>
+  </registeredFiles>
+  <dependenciesInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.5</version>
+        <type>jar</type>
+        <scope>provided</scope>
+        <exclusions/>
+        <location>
+          <lineNumber>76</lineNumber>
+          <columnNumber>21</columnNumber>
+          <source>
+            <modelId>org.example:DHT-TraCuu:1.0-SNAPSHOT</modelId>
+            <location>C:\Users\THANH TAI\Documents\GitHub\herokuJavaWeb\pom.xml</location>
+          </source>
+        </location>
+        <groupIdLocation>
+          <lineNumber>77</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../location/source"/>
+        </groupIdLocation>
+        <artifactIdLocation>
+          <lineNumber>78</lineNumber>
+          <columnNumber>25</columnNumber>
+          <source reference="../../location/source"/>
+        </artifactIdLocation>
+        <versionLocation>
+          <lineNumber>79</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../location/source"/>
+        </versionLocation>
+        <scopeLocation>
+          <lineNumber>80</lineNumber>
+          <columnNumber>20</columnNumber>
+          <source reference="../../location/source"/>
+        </scopeLocation>
+        <managementKey>javax.servlet:servlet-api:jar</managementKey>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>javax</groupId>
+        <artifactId>javaee-web-api</artifactId>
+        <version>8.0.1</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions/>
+        <location>
+          <lineNumber>82</lineNumber>
+          <columnNumber>21</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </location>
+        <groupIdLocation>
+          <lineNumber>83</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </groupIdLocation>
+        <artifactIdLocation>
+          <lineNumber>84</lineNumber>
+          <columnNumber>25</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </artifactIdLocation>
+        <versionLocation>
+          <lineNumber>85</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </versionLocation>
+        <managementKey>javax:javaee-web-api:jar</managementKey>
+      </dependency>
+      <targetFileName>javaee-web-api-8.0.1.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>5.0.2.RELEASE</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions/>
+        <location>
+          <lineNumber>87</lineNumber>
+          <columnNumber>21</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </location>
+        <groupIdLocation>
+          <lineNumber>88</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </groupIdLocation>
+        <artifactIdLocation>
+          <lineNumber>89</lineNumber>
+          <columnNumber>25</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </artifactIdLocation>
+        <versionLocation>
+          <lineNumber>90</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </versionLocation>
+        <managementKey>org.springframework:spring-webmvc:jar</managementKey>
+      </dependency>
+      <targetFileName>spring-webmvc-5.0.2.RELEASE.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-util</artifactId>
+        <version>6.1.25</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions/>
+        <location>
+          <lineNumber>92</lineNumber>
+          <columnNumber>21</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </location>
+        <groupIdLocation>
+          <lineNumber>93</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </groupIdLocation>
+        <artifactIdLocation>
+          <lineNumber>94</lineNumber>
+          <columnNumber>25</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </artifactIdLocation>
+        <versionLocation>
+          <lineNumber>95</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </versionLocation>
+        <managementKey>org.mortbay.jetty:jetty-util:jar</managementKey>
+      </dependency>
+      <targetFileName>jetty-util-6.1.25.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20210307</version>
+        <type>jar</type>
+        <scope>system</scope>
+        <systemPath>C:\Users\THANH TAI\Documents\GitHub\herokuJavaWeb/src/main/resources/java-json.jar</systemPath>
+        <exclusions/>
+        <location>
+          <lineNumber>97</lineNumber>
+          <columnNumber>21</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </location>
+        <groupIdLocation>
+          <lineNumber>98</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </groupIdLocation>
+        <artifactIdLocation>
+          <lineNumber>99</lineNumber>
+          <columnNumber>25</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </artifactIdLocation>
+        <versionLocation>
+          <lineNumber>100</lineNumber>
+          <columnNumber>22</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </versionLocation>
+        <scopeLocation>
+          <lineNumber>101</lineNumber>
+          <columnNumber>20</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </scopeLocation>
+        <systemPathLocation>
+          <lineNumber>102</lineNumber>
+          <columnNumber>25</columnNumber>
+          <source reference="../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/location/source"/>
+        </systemPathLocation>
+        <managementKey>org.json:json:jar</managementKey>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+  </dependenciesInfo>
+</webapp-structure>
