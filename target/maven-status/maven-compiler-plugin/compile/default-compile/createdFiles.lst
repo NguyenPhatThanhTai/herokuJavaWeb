@@ -1,3 +1,2 @@
-test.class
-Controller.class
-getAPI.class
+com\javamaster\controller\Controller.class
+com\javamaster\controller\getAPI.class
