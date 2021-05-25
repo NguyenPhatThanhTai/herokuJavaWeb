@@ -12,6 +12,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="DHT-TraCuu" />
+          <element id="jpa-descriptors" facet="DHT-TraCuu/jpa/JPA" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax:javaee-web-api:8.0.1" />
@@ -24,12 +25,14 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.mortbay.jetty:jetty-util:6.1.25" />
+          <element id="library" level="module" name="Maven: org.json:json:20210307" module-name="DHT-TraCuu" />
         </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/TraCuu/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="DHT-TraCuu/web/Web" />
+      <element id="javaee-facet-resources" facet="DHT-TraCuu/web/Web2" />
     </root>
   </artifact>
 </component>

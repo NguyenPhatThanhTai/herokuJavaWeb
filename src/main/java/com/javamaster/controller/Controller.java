@@ -16,7 +16,7 @@ import java.util.Base64;
 public class Controller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/View/view/tra-cuu.jsp").forward(req, resp);
+        req.getRequestDispatcher("View/view/tra-cuu.jsp").forward(req, resp);
     }
 
     @Override
