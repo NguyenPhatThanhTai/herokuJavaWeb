@@ -1,11 +1,9 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="DHT-TraCuu:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/DHT_TraCuu_war_exploded</output-path>
+  <artifact type="exploded-war" name="herokuJavaWeb:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/herokuJavaWeb_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="DHT-TraCuu" />
-          <element id="jpa-descriptors" facet="DHT-TraCuu/jpa/JPA" />
           <element id="module-output" name="herokuJavaWeb" />
           <element id="jpa-descriptors" facet="herokuJavaWeb/jpa/JPA" />
         </element>
@@ -19,14 +17,12 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.mortbay.jetty:jetty-util:6.1.25" />
-          <element id="library" level="module" name="Maven: org.json:json:20210307" module-name="DHT-TraCuu" />
-          <element id="library" level="project" name="Maven: javax:javaee-web-api:8.0.1" />
           <element id="library" level="module" name="Maven: org.json:json:20210307" module-name="herokuJavaWeb" />
+          <element id="library" level="project" name="Maven: javax:javaee-web-api:8.0.1" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="DHT-TraCuu/web/Web" />
-      <element id="javaee-facet-resources" facet="DHT-TraCuu/web/Web2" />
       <element id="javaee-facet-resources" facet="herokuJavaWeb/web/Web" />
+      <element id="javaee-facet-resources" facet="herokuJavaWeb/web/Web2" />
     </root>
   </artifact>
 </component>

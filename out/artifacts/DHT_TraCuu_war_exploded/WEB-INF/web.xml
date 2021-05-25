@@ -2,6 +2,15 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
     <display-name>UNIFY</display-name>
     <welcome-file-list>
-        <welcome-file></welcome-file>
+        <welcome-file>/Tra-Cuu</welcome-file>
     </welcome-file-list>
+<!--    <servlet>-->
+<!--        <display-name>Tra-Cuu</display-name>-->
+<!--        <servlet-name>Tra-Cuu</servlet-name>-->
+<!--        <servlet-class>Controller</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Tra-Cuu</servlet-name>-->
+<!--        <url-pattern>/Tra-Cuu</url-pattern>-->
+<!--    </servlet-mapping>-->
 </web-app>
