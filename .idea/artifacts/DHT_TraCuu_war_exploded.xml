@@ -22,6 +22,7 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="DHT-TraCuu/web/Web" />
+      <element id="javaee-facet-resources" facet="DHT-TraCuu/web/Web2" />
     </root>
   </artifact>
 </component>
