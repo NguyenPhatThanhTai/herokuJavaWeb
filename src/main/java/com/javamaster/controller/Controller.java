@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Base64;
 
-@WebServlet(urlPatterns = "/Controller")
+@WebServlet(urlPatterns = "/Tra-Cuu")
 public class Controller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
         try {
-            req.getRequestDispatcher("/WEB-INF/View/view/tra-cuu.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/view/tra-cuu.jsp").forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -72,7 +72,7 @@ public class Controller extends HttpServlet {
             req.setAttribute("Email", Email);
             req.setAttribute("Status", Status);
 
-            req.getRequestDispatcher("/WEB-INF/View/view/tra-cuu.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/view/tra-cuu.jsp").forward(req, resp);
         } catch (Exception e) {
             req.setAttribute("Id",Id);
             req.setAttribute("Repair_Id", "Không tìm thấy");
@@ -81,7 +81,7 @@ public class Controller extends HttpServlet {
             req.setAttribute("Email", "Không tìm thấy");
             req.setAttribute("Status", "Không tìm thấy");
             try {
-                req.getRequestDispatcher("/WEB-INF/View/view/tra-cuu.jsp").forward(req, resp);
+                req.getRequestDispatcher("WEB-INF/view/tra-cuu.jsp").forward(req, resp);
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
