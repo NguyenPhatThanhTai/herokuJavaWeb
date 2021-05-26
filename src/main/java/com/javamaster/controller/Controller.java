@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.Base64;
 
 @WebServlet(urlPatterns = "/Tra-Cuu")
@@ -82,7 +81,7 @@ public class Controller extends HttpServlet {
             req.setAttribute("Status", "Không tìm thấy");
             try {
                 req.getRequestDispatcher("WEB-INF/view/tra-cuu.jsp").forward(req, resp);
-            } catch (IOException ioException) {
+            } catch (Exception ioException) {
                 ioException.printStackTrace();
             }
 //            e.printStackTrace();
