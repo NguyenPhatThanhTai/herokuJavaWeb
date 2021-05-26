@@ -1,7 +1,6 @@
 package com.javamaster.controller;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import javax.servlet.ServletException;
@@ -12,15 +11,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Base64;
 
-@WebServlet(urlPatterns = "/Tra-Cuu")
+@WebServlet(urlPatterns = "/Controller")
 public class Controller extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("View/view/tra-cuu.jsp").forward(req, resp);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+        try {
+            req.getRequestDispatcher("/WEB-INF/View/view/tra-cuu.jsp").forward(req, resp);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
         String Id = req.getParameter("Id");
         JSONObject json = null;
         String Repair_Id = "";
@@ -69,15 +72,19 @@ public class Controller extends HttpServlet {
             req.setAttribute("Email", Email);
             req.setAttribute("Status", Status);
 
-            req.getRequestDispatcher("/View/view/tra-cuu.jsp").forward(req, resp);
-        } catch (JSONException e) {
+            req.getRequestDispatcher("/WEB-INF/View/view/tra-cuu.jsp").forward(req, resp);
+        } catch (Exception e) {
             req.setAttribute("Id",Id);
             req.setAttribute("Repair_Id", "Không tìm thấy");
             req.setAttribute("Customer_Name", "Không tìm thấy");
             req.setAttribute("Laptop_Name", "Không tìm thấy");
             req.setAttribute("Email", "Không tìm thấy");
             req.setAttribute("Status", "Không tìm thấy");
-            req.getRequestDispatcher("/View/view/tra-cuu.jsp").forward(req, resp);
+            try {
+                req.getRequestDispatcher("/WEB-INF/View/view/tra-cuu.jsp").forward(req, resp);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
 //            e.printStackTrace();
         }
     }
