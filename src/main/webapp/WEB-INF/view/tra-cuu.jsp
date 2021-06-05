@@ -137,6 +137,7 @@
     <a class="u-link" href="https://nicepage.com/" target="_blank">
         <span>WYSIWYG Web Builder</span>
     </a>.
+    <a href="https://dht-tracuu.herokuapp.com/Message">Nhấn nếu cần trợ giúp(Thử nghiệm)</a>
 </section>
 </body>
 </html>
