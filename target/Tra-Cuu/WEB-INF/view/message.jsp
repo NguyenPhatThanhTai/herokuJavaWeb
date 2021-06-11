@@ -7,7 +7,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="10" >
+<%--    <meta http-equiv="refresh" content="10" >--%>
     <title>Trợ Giúp</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -75,6 +75,7 @@
                 getAPI getAPI = new getAPI();
                 json = getAPI.readJsonFromUrl("https://dht-api.000webhostapp.com/APIDoAnJava/getMessage.php?Id="+session.getAttribute("Id"));
                 JSONArray jsonArray = json.getJSONArray("Check");
+                System.out.println(jsonArray);
                 if (jsonArray != null){
                     for (int i = 0; i < jsonArray.length(); i ++){
                         if (jsonArray.getJSONObject(i).getString("msg_Staff").equals("Admin")){
@@ -120,6 +121,17 @@
     </div>
     <button type="submit" class="btn btn-primary">Gửi</button>
 </form>
+
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+    function doRefresh() {
+        $( "#message" ).load(window.location.href + " #message" );
+    }
+    $(function() {
+        setInterval(doRefresh, 3000);
+    });
+
+</script>
 
 </body>
 </html>
