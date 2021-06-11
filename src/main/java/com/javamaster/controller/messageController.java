@@ -21,7 +21,6 @@ public class messageController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/view/message.jsp").forward(req, resp);
         HttpSession session = req.getSession();
         req.setCharacterEncoding("UTF-8");
         String Message = req.getParameter("Message");
@@ -39,6 +38,7 @@ public class messageController extends HttpServlet {
                 String result = getAPI.sendMessage(Message, (String) session.getAttribute("Id"));
                 session.setAttribute("Id", result);
             }
+            req.getRequestDispatcher("WEB-INF/view/message.jsp").forward(req, resp);
             System.out.println("Ok");
         }catch (Exception ex){
             ex.printStackTrace();
