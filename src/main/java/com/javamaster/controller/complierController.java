@@ -50,7 +50,7 @@ public class complierController extends HttpServlet {
 
             result result = new result("post", resultComplie);
             String json = new Gson().toJson(result);
-            resp.addHeader("Access-Control-Allow-Origin", "*");
+            resp.addHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
             resp.addHeader("Access-Control-Allow-Methods", "GET, OPTIONS, HEAD, PUT, POST");
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");
@@ -59,9 +59,6 @@ public class complierController extends HttpServlet {
             // crash and burn
             throw new IOException("Error parsing JSON request string");
         }
-
-        resp.addHeader("Access-Control-Allow-Origin", "*");
-        resp.addHeader("Access-Control-Allow-Methods", "GET, OPTIONS, HEAD, PUT, POST");
         // Work with the data using methods like...
         // int someInt = jsonObject.getInt("intParamName");
         // JSONObject nestedObj = jsonObject.getJSONObject("nestedObjName");
