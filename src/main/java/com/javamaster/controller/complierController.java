@@ -23,7 +23,6 @@ public class complierController extends HttpServlet {
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
         resp.getWriter().write(json);
-        resp.setHeader("Access-Control-Allow-Origin", "*");
     }
 
     @Override
@@ -51,16 +50,16 @@ public class complierController extends HttpServlet {
 
             result result = new result("post", resultComplie);
             String json = new Gson().toJson(result);
+            resp.setHeader("Access-Control-Allow-Origin", "*");
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");
             resp.getWriter().write(json);
-            resp.setHeader("Access-Control-Allow-Origin", "*");
         } catch (JSONException e) {
             // crash and burn
             throw new IOException("Error parsing JSON request string");
         }
 
-
+        resp.setHeader("Access-Control-Allow-Origin", "*");
         // Work with the data using methods like...
         // int someInt = jsonObject.getInt("intParamName");
         // JSONObject nestedObj = jsonObject.getJSONObject("nestedObjName");
