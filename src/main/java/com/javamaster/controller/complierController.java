@@ -61,6 +61,7 @@ public class complierController extends HttpServlet {
         }
 
         resp.addHeader("Access-Control-Allow-Origin", "*");
+        resp.addHeader("Access-Control-Allow-Methods", "GET, OPTIONS, HEAD, PUT, POST");
         // Work with the data using methods like...
         // int someInt = jsonObject.getInt("intParamName");
         // JSONObject nestedObj = jsonObject.getJSONObject("nestedObjName");
