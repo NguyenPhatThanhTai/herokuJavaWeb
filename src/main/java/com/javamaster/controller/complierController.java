@@ -17,6 +17,7 @@ import java.io.IOException;
 public class complierController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setHeader("Access-Control-Allow-Origin", "*");
         String data = req.getParameter("test");
         result result = new result("get", data);
         String json = new Gson().toJson(result);
@@ -27,6 +28,7 @@ public class complierController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setHeader("Access-Control-Allow-Origin", "*");
         StringBuffer jb = new StringBuffer();
         String line = null;
         try {
