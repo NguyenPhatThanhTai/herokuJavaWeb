@@ -17,18 +17,17 @@ import java.io.IOException;
 public class complierController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setHeader("Access-Control-Allow-Origin", "*");
         String data = req.getParameter("test");
         result result = new result("get", data);
         String json = new Gson().toJson(result);
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
         resp.getWriter().write(json);
+        resp.setHeader("Access-Control-Allow-Origin", "*");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setHeader("Access-Control-Allow-Origin", "*");
         StringBuffer jb = new StringBuffer();
         String line = null;
         try {
@@ -55,10 +54,12 @@ public class complierController extends HttpServlet {
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");
             resp.getWriter().write(json);
+            resp.setHeader("Access-Control-Allow-Origin", "*");
         } catch (JSONException e) {
             // crash and burn
             throw new IOException("Error parsing JSON request string");
         }
+
 
         // Work with the data using methods like...
         // int someInt = jsonObject.getInt("intParamName");
