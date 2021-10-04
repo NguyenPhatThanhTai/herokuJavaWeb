@@ -23,10 +23,12 @@ public class complierController extends HttpServlet {
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
         resp.getWriter().write(json);
+        resp.addHeader("Access-Control-Allow-Origin", "*");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.addHeader("Access-Control-Allow-Origin", "*");
         StringBuffer jb = new StringBuffer();
         String line = null;
         try {
@@ -50,8 +52,6 @@ public class complierController extends HttpServlet {
 
             result result = new result("post", resultComplie);
             String json = new Gson().toJson(result);
-            resp.addHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
-            resp.addHeader("Access-Control-Allow-Methods", "GET, OPTIONS, HEAD, PUT, POST");
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");
             resp.getWriter().write(json);
