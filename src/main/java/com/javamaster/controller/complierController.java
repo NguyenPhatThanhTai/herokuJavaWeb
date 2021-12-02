@@ -12,6 +12,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.*;
+import java.util.*;
+import java.nio.*;
+import java.net.*;
+import java.lang.*;
+import java.applet.*;
+import java.awt.*;
+import java.beans.*;
+import java.math.*;
+import java.time.*;
+import java.security.*;
+import java.text.*;
+import java.rmi.*;
+import java.sql.*;
+import java.lang.*;
 
 @WebServlet(urlPatterns = "/compiler")
 public class complierController extends HttpServlet {
@@ -48,7 +63,7 @@ public class complierController extends HttpServlet {
             System.out.println(phyPath);
 
             complie complie = new complie();
-            String resultComplie = complie.runComplie("public class Solution{public void run(){" + someString + "}}", phyPath);
+            String resultComplie = complie.runComplie(someString, phyPath);
 
             result result = new result("post", resultComplie);
             String json = new Gson().toJson(result);

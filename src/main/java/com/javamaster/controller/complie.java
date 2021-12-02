@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collections;
 
 public class complie {
@@ -20,7 +21,7 @@ public class complie {
 
         String source = code;
         File folder = new File(path);
-        File sourceFile = new File(folder, "Solution.java");
+        File sourceFile = new File(folder, "Java.java");
 
         try {
             Files.write(sourceFile.toPath(), source.getBytes(StandardCharsets.UTF_8));
@@ -47,12 +48,13 @@ public class complie {
 
             int compilationResult = compiler.run(null, null, null, sourceFile.getPath());
             if (compilationResult == 0) {
-                System.out.println("Compilation is successful");
                 URLClassLoader classLoader = URLClassLoader.newInstance(new URL[] {folder.toURI().toURL() });
-                Class<?> cls = Class.forName("Solution", true, classLoader);
-                Object instance = cls.newInstance();
-                Method method = cls.getDeclaredMethod("run", null);
-                System.out.println(method.invoke(instance, null));
+                Class<?> cls = Class.forName("Java", true, classLoader);
+                Method method = cls.getMethod("main", String[].class);
+
+                Object[] args = new Object[1];
+                args[0] = new String[] { "1", "2"};
+                System.out.println(method.invoke(null, args));
             } else {
                 System.out.println("Compilation Failed");
             }
